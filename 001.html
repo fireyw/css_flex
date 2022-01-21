@@ -9,20 +9,45 @@
 	<style>
 		.flex-container{
 			display: flex;
-			/*display: inline-flex;*/
-			flex-direction: row;
-			/*flex-flow: row wrap;*/
-			justify-content: center;
+			flex-direction: column;
+			min-height: 100vh;
+			border: 10px solid red;
 		}
-		.cont
+
+		.flex-item{
+			flex: 1 auto;
+		}
+
+		@media (min-width: 500px) {
+			.flex-container{
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+			.flex-item {
+				width: 50%;
+				/*flex: 0 auto;*/
+				/*flex-basis: 50%;*/
+				/*flex-basis: auto;*/
+			}
+		}
+		@media (min-width: 800px) {
+			.flex-item{
+				width: 30%;
+			}
+		}
 	</style>
 </head>
 <body>
 	<div class="flex-container">
-		<div class="flex-item">AAAAAAAAAAAAAAAA    CCCCC       AAAAAAAAAAAAAAAAA</div>
-		<div class="flex-item">BBB</div>
-		<div class="flex-item">CCCCC</div>
+		<div class="flex-item">AAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCCC</div>
+		<div class="flex-item">AAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCCC</div>
+		<div class="flex-item">AAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCCC</div>
 	</div>
-ddsdasdasdadasasdddddd
 </body>
 </html>
